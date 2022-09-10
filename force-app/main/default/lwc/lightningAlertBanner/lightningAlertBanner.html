@@ -1,0 +1,18 @@
+<!-- sldsValidatorIgnore -->
+<template>
+  <div class={alertClasses} role="alert">
+    <span class="slds-assistive-text">{iconText}</span>
+    <lightning-icon size="x-small" icon-name={iconName} alternative-text={iconText} title={iconText}></lightning-icon>
+    <h2 class="slds-m-left_x-small">{alertText}</h2>
+    <div class="slds-notify__close" if:true={showCloseButton}>
+      <lightning-button-icon
+        icon-name="utility:close"
+        variant="bare"
+        alternative-text="Close"
+        title="Close"
+        size="small"
+        onclick={closeAlert}
+      ></lightning-button-icon>
+    </div>
+  </div>
+</template>
